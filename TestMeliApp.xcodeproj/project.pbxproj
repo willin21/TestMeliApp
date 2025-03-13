@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65E70EF76EFA9074D5143A05 /* Pods_TestMeliApp_TestMeliAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64747031F4A3D8ED50D2296C /* Pods_TestMeliApp_TestMeliAppUITests.framework */; };
+		C7C447B11E38E3A3FE1CDDB5 /* Pods_TestMeliApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5FA08AA527FB7EF4D4A9BE /* Pods_TestMeliApp.framework */; };
+		F89A1DDC5B70AE55CECD63A9 /* Pods_TestMeliAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8696AE597DBCB20866F8C7F9 /* Pods_TestMeliAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C44E0BCE2D81F5C600F9A7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C44E0BAF2D81F5BF00F9A7F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C44E0BB62D81F5BF00F9A7F5;
+			remoteInfo = TestMeliApp;
+		};
+		C44E0BD82D81F5C600F9A7F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C44E0BAF2D81F5BF00F9A7F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C44E0BB62D81F5BF00F9A7F5;
+			remoteInfo = TestMeliApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05F5E2FF1B26B11BAA7B0A72 /* Pods-TestMeliApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliApp.debug.xcconfig"; path = "Target Support Files/Pods-TestMeliApp/Pods-TestMeliApp.debug.xcconfig"; sourceTree = "<group>"; };
+		219718F54D54CD85696C49E4 /* Pods-TestMeliApp-TestMeliAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliApp-TestMeliAppUITests.release.xcconfig"; path = "Target Support Files/Pods-TestMeliApp-TestMeliAppUITests/Pods-TestMeliApp-TestMeliAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4BF461D8B22EBC50DFC12EC2 /* Pods-TestMeliAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TestMeliAppTests/Pods-TestMeliAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		64747031F4A3D8ED50D2296C /* Pods_TestMeliApp_TestMeliAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMeliApp_TestMeliAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64F58FD290FB667547BE01AB /* Pods-TestMeliAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliAppTests.release.xcconfig"; path = "Target Support Files/Pods-TestMeliAppTests/Pods-TestMeliAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6F5FA08AA527FB7EF4D4A9BE /* Pods_TestMeliApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMeliApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8696AE597DBCB20866F8C7F9 /* Pods_TestMeliAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestMeliAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44E0BB72D81F5BF00F9A7F5 /* TestMeliApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestMeliApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44E0BCD2D81F5C600F9A7F5 /* TestMeliAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMeliAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44E0BD72D81F5C600F9A7F5 /* TestMeliAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestMeliAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1239C4B5ADAE38D84D8D92 /* Pods-TestMeliApp-TestMeliAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliApp-TestMeliAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestMeliApp-TestMeliAppUITests/Pods-TestMeliApp-TestMeliAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F015F05EE076199F79928A8C /* Pods-TestMeliApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestMeliApp.release.xcconfig"; path = "Target Support Files/Pods-TestMeliApp/Pods-TestMeliApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		C44E0BDF2D81F5C600F9A7F5 /* Exceptions for "TestMeliApp" folder in "TestMeliApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = C44E0BB62D81F5BF00F9A7F5 /* TestMeliApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		C44E0BB92D81F5BF00F9A7F5 /* TestMeliApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				C44E0BDF2D81F5C600F9A7F5 /* Exceptions for "TestMeliApp" folder in "TestMeliApp" target */,
+			);
+			path = TestMeliApp;
+			sourceTree = "<group>";
+		};
+		C44E0BD02D81F5C600F9A7F5 /* TestMeliAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestMeliAppTests;
+			sourceTree = "<group>";
+		};
+		C44E0BDA2D81F5C600F9A7F5 /* TestMeliAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TestMeliAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C44E0BB42D81F5BF00F9A7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C447B11E38E3A3FE1CDDB5 /* Pods_TestMeliApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BCA2D81F5C600F9A7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F89A1DDC5B70AE55CECD63A9 /* Pods_TestMeliAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BD42D81F5C600F9A7F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65E70EF76EFA9074D5143A05 /* Pods_TestMeliApp_TestMeliAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F79513B289D3B997069706F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05F5E2FF1B26B11BAA7B0A72 /* Pods-TestMeliApp.debug.xcconfig */,
+				F015F05EE076199F79928A8C /* Pods-TestMeliApp.release.xcconfig */,
+				EA1239C4B5ADAE38D84D8D92 /* Pods-TestMeliApp-TestMeliAppUITests.debug.xcconfig */,
+				219718F54D54CD85696C49E4 /* Pods-TestMeliApp-TestMeliAppUITests.release.xcconfig */,
+				4BF461D8B22EBC50DFC12EC2 /* Pods-TestMeliAppTests.debug.xcconfig */,
+				64F58FD290FB667547BE01AB /* Pods-TestMeliAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AD9263916032D6B173646195 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F5FA08AA527FB7EF4D4A9BE /* Pods_TestMeliApp.framework */,
+				64747031F4A3D8ED50D2296C /* Pods_TestMeliApp_TestMeliAppUITests.framework */,
+				8696AE597DBCB20866F8C7F9 /* Pods_TestMeliAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C44E0BAE2D81F5BF00F9A7F5 = {
+			isa = PBXGroup;
+			children = (
+				C44E0BB92D81F5BF00F9A7F5 /* TestMeliApp */,
+				C44E0BD02D81F5C600F9A7F5 /* TestMeliAppTests */,
+				C44E0BDA2D81F5C600F9A7F5 /* TestMeliAppUITests */,
+				C44E0BB82D81F5BF00F9A7F5 /* Products */,
+				5F79513B289D3B997069706F /* Pods */,
+				AD9263916032D6B173646195 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C44E0BB82D81F5BF00F9A7F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C44E0BB72D81F5BF00F9A7F5 /* TestMeliApp.app */,
+				C44E0BCD2D81F5C600F9A7F5 /* TestMeliAppTests.xctest */,
+				C44E0BD72D81F5C600F9A7F5 /* TestMeliAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C44E0BB62D81F5BF00F9A7F5 /* TestMeliApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44E0BE02D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliApp" */;
+			buildPhases = (
+				CD3B0BEB83937E28BF1387DE /* [CP] Check Pods Manifest.lock */,
+				C44E0BB32D81F5BF00F9A7F5 /* Sources */,
+				C44E0BB42D81F5BF00F9A7F5 /* Frameworks */,
+				C44E0BB52D81F5BF00F9A7F5 /* Resources */,
+				3B0C8F99DF4E0B0B0CDAAD55 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C44E0BB92D81F5BF00F9A7F5 /* TestMeliApp */,
+			);
+			name = TestMeliApp;
+			productName = TestMeliApp;
+			productReference = C44E0BB72D81F5BF00F9A7F5 /* TestMeliApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C44E0BCC2D81F5C600F9A7F5 /* TestMeliAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44E0BE52D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliAppTests" */;
+			buildPhases = (
+				5E9B60228ABF8928A9B7F9E0 /* [CP] Check Pods Manifest.lock */,
+				C44E0BC92D81F5C600F9A7F5 /* Sources */,
+				C44E0BCA2D81F5C600F9A7F5 /* Frameworks */,
+				C44E0BCB2D81F5C600F9A7F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C44E0BCF2D81F5C600F9A7F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C44E0BD02D81F5C600F9A7F5 /* TestMeliAppTests */,
+			);
+			name = TestMeliAppTests;
+			productName = TestMeliAppTests;
+			productReference = C44E0BCD2D81F5C600F9A7F5 /* TestMeliAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C44E0BD62D81F5C600F9A7F5 /* TestMeliAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C44E0BE82D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliAppUITests" */;
+			buildPhases = (
+				47E8919659FB4E7676C5EFF1 /* [CP] Check Pods Manifest.lock */,
+				C44E0BD32D81F5C600F9A7F5 /* Sources */,
+				C44E0BD42D81F5C600F9A7F5 /* Frameworks */,
+				C44E0BD52D81F5C600F9A7F5 /* Resources */,
+				6EF2423DADCBF09F8D849950 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C44E0BD92D81F5C600F9A7F5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				C44E0BDA2D81F5C600F9A7F5 /* TestMeliAppUITests */,
+			);
+			name = TestMeliAppUITests;
+			productName = TestMeliAppUITests;
+			productReference = C44E0BD72D81F5C600F9A7F5 /* TestMeliAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C44E0BAF2D81F5BF00F9A7F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					C44E0BB62D81F5BF00F9A7F5 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					C44E0BCC2D81F5C600F9A7F5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C44E0BB62D81F5BF00F9A7F5;
+					};
+					C44E0BD62D81F5C600F9A7F5 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = C44E0BB62D81F5BF00F9A7F5;
+					};
+				};
+			};
+			buildConfigurationList = C44E0BB22D81F5BF00F9A7F5 /* Build configuration list for PBXProject "TestMeliApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C44E0BAE2D81F5BF00F9A7F5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = C44E0BB82D81F5BF00F9A7F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C44E0BB62D81F5BF00F9A7F5 /* TestMeliApp */,
+				C44E0BCC2D81F5C600F9A7F5 /* TestMeliAppTests */,
+				C44E0BD62D81F5C600F9A7F5 /* TestMeliAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C44E0BB52D81F5BF00F9A7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BCB2D81F5C600F9A7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BD52D81F5C600F9A7F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3B0C8F99DF4E0B0B0CDAAD55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp/Pods-TestMeliApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp/Pods-TestMeliApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp/Pods-TestMeliApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E8919659FB4E7676C5EFF1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMeliApp-TestMeliAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E9B60228ABF8928A9B7F9E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMeliAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6EF2423DADCBF09F8D849950 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp-TestMeliAppUITests/Pods-TestMeliApp-TestMeliAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp-TestMeliAppUITests/Pods-TestMeliApp-TestMeliAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestMeliApp-TestMeliAppUITests/Pods-TestMeliApp-TestMeliAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD3B0BEB83937E28BF1387DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestMeliApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C44E0BB32D81F5BF00F9A7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BC92D81F5C600F9A7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C44E0BD32D81F5C600F9A7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C44E0BCF2D81F5C600F9A7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C44E0BB62D81F5BF00F9A7F5 /* TestMeliApp */;
+			targetProxy = C44E0BCE2D81F5C600F9A7F5 /* PBXContainerItemProxy */;
+		};
+		C44E0BD92D81F5C600F9A7F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C44E0BB62D81F5BF00F9A7F5 /* TestMeliApp */;
+			targetProxy = C44E0BD82D81F5C600F9A7F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C44E0BE12D81F5C600F9A7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05F5E2FF1B26B11BAA7B0A72 /* Pods-TestMeliApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestMeliApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C44E0BE22D81F5C600F9A7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F015F05EE076199F79928A8C /* Pods-TestMeliApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestMeliApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Home;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C44E0BE32D81F5C600F9A7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C44E0BE42D81F5C600F9A7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C44E0BE62D81F5C600F9A7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BF461D8B22EBC50DFC12EC2 /* Pods-TestMeliAppTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRY52GSDJY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp.TestMeliAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMeliApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestMeliApp";
+			};
+			name = Debug;
+		};
+		C44E0BE72D81F5C600F9A7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64F58FD290FB667547BE01AB /* Pods-TestMeliAppTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRY52GSDJY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp.TestMeliAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestMeliApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestMeliApp";
+			};
+			name = Release;
+		};
+		C44E0BE92D81F5C600F9A7F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA1239C4B5ADAE38D84D8D92 /* Pods-TestMeliApp-TestMeliAppUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRY52GSDJY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp.TestMeliAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestMeliApp;
+			};
+			name = Debug;
+		};
+		C44E0BEA2D81F5C600F9A7F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 219718F54D54CD85696C49E4 /* Pods-TestMeliApp-TestMeliAppUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KRY52GSDJY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assessment.TestMeliApp.TestMeliAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestMeliApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C44E0BB22D81F5BF00F9A7F5 /* Build configuration list for PBXProject "TestMeliApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44E0BE32D81F5C600F9A7F5 /* Debug */,
+				C44E0BE42D81F5C600F9A7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C44E0BE02D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44E0BE12D81F5C600F9A7F5 /* Debug */,
+				C44E0BE22D81F5C600F9A7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C44E0BE52D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44E0BE62D81F5C600F9A7F5 /* Debug */,
+				C44E0BE72D81F5C600F9A7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C44E0BE82D81F5C600F9A7F5 /* Build configuration list for PBXNativeTarget "TestMeliAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C44E0BE92D81F5C600F9A7F5 /* Debug */,
+				C44E0BEA2D81F5C600F9A7F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C44E0BAF2D81F5BF00F9A7F5 /* Project object */;
+}
