@@ -1,6 +1,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import CocoaLumberjack
 
 class SearchViewModel {
     
@@ -23,7 +24,9 @@ class SearchViewModel {
             onNext: { [weak self] (response) in
                 self?.searchResultBehavior.accept([response])
             }, onError: { (error) in
-                self.error.onNext(error.localizedDescription)
+                let errorDescription = error.localizedDescription
+                self.error.onNext(errorDescription)
+                DDLogError("getSearchCollection error: \(errorDescription)")
         }).disposed(by: disposeBag)
     }
 }

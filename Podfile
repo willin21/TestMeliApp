@@ -13,6 +13,7 @@ target 'TestMeliApp' do
   pod 'RxCocoa'
   pod 'RxDataSources'
   pod 'MBProgressHUD'
+  pod 'CocoaLumberjack/Swift'
 
   target 'TestMeliAppTests' do
     inherit! :search_paths

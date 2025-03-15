@@ -1,10 +1,14 @@
 import UIKit
+import CocoaLumberjack
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        DDLog.add(DDOSLogger.sharedInstance) // Usa el logger de OS
+        DDLogInfo("CocoaLumberjack configurado correctamente")
+
         return true
     }
 

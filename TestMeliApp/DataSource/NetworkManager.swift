@@ -1,5 +1,6 @@
 import Alamofire
 import RxSwift
+import CocoaLumberjack
 
 protocol NetworkRequest {
     func request<T: Codable>(_ api: ApiRouter) -> Observable<T>
@@ -25,16 +26,24 @@ class NetworkManager: NetworkRequest {
                     if let data = response.data {
                         do {
                             let model: T = try T.toModel(data: data)
+                            
+                            DDLogInfo("Parsing data was successfully.")
                             observer.onNext(model)
                         } catch let error {
                             let nsError = NSError(domain: "Parsing data error.", code: response.response?.statusCode ?? 0, userInfo: ["message": error.localizedDescription])
+                            let errorDescription = error.localizedDescription
+                            
+                            DDLogError("Parsing data error: \(errorDescription)")
                             observer.onError(nsError)
                         }
                     } else if let error = response.error {
                         let nsError = NSError(domain: "Error", code: 0, userInfo: ["message": error.localizedDescription])
+                        let errorDescription = error.localizedDescription
+                        
+                        DDLogError("Response error on api \(api.path): \(errorDescription)")
                         observer.onError(nsError)
                     }
-            }
+                }
             return Disposables.create()
         }
     }

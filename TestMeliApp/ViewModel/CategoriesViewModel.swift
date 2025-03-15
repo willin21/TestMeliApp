@@ -1,6 +1,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import CocoaLumberjack
 
 class CategoriesViewModel {
     
@@ -24,7 +25,9 @@ class CategoriesViewModel {
                 self?.saveCategories(response)
                 self?.categoriesBehavior.accept(response)
             }, onError: { (error) in
-                self.error.onNext(error.localizedDescription)
+                let errorDescription = error.localizedDescription
+                self.error.onNext(errorDescription)
+                DDLogError("getCategories error: \(errorDescription)")
             }).disposed(by: disposeBag)
     }
     
@@ -39,7 +42,9 @@ class CategoriesViewModel {
                     self?.firstCategoryBehavior.accept(results)
                 }
             }, onError: { (error) in
-                self.error.onNext(error.localizedDescription)
+                let errorDescription = error.localizedDescription
+                self.error.onNext(errorDescription)
+                DDLogError("getSearchByCategory error: \(errorDescription)")
             }).disposed(by: disposeBag)
     }
     
@@ -54,7 +59,9 @@ class CategoriesViewModel {
                     self?.lastCategoryBehavior.accept(results)
                 }
             }, onError: { (error) in
-                self.error.onNext(error.localizedDescription)
+                let errorDescription = error.localizedDescription
+                self.error.onNext(errorDescription)
+                DDLogError("getSearchByCategory error: \(errorDescription)")
             }).disposed(by: disposeBag)
     }
     
@@ -62,7 +69,9 @@ class CategoriesViewModel {
         do {
             try CategoriesHelper.shared.save(categories)
         } catch {
-            print(error.localizedDescription)
+            let errorDescription = error.localizedDescription
+            self.error.onNext(errorDescription)
+            DDLogError("saveCategories error: \(errorDescription)")
         }
     }
 }

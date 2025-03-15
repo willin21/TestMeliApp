@@ -1,6 +1,7 @@
 import Foundation
 import RxCocoa
 import RxSwift
+import CocoaLumberjack
 
 class OAuthViewModel {
     
@@ -23,7 +24,9 @@ class OAuthViewModel {
             onNext: { [weak self] (response) in
                 self?.oauthBehavior.accept([response])
             }, onError: { (error) in
-                self.error.onNext(error.localizedDescription)
+                let errorDescription = error.localizedDescription
+                self.error.onNext(errorDescription)
+                DDLogError("getOAuthToken error: \(errorDescription)")
             }).disposed(by: disposeBag)
     }
     
@@ -71,10 +74,14 @@ class OAuthViewModel {
                     do {
                         try OAuthHelper.shared.saveUser(user)
                     } catch {
-                        self.error.onNext(error.localizedDescription)
+                        let errorDescription = error.localizedDescription
+                        self.error.onNext(errorDescription)
+                        DDLogError("Error trying to save user: \(errorDescription)")
                     }
                 }, onError: { (error) in
-                    self.error.onNext(error.localizedDescription)
+                    let errorDescription = error.localizedDescription
+                    self.error.onNext(errorDescription)
+                    DDLogError("getUser error: \(errorDescription)")
                 }).disposed(by: disposeBag)
             
             return
