@@ -6,8 +6,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        DDLog.add(DDOSLogger.sharedInstance) // Usa el logger de OS
-        DDLogInfo("CocoaLumberjack configurado correctamente")
+        setupLogger()
+        verifyTrackingPermissions()
+        verifyNotificationPermissions()
 
         return true
     }
@@ -26,6 +27,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    private func setupLogger() {
+        DDLog.add(DDOSLogger.sharedInstance) // Usa el logger de OS
+        DDLogInfo("CocoaLumberjack configurado correctamente")
+    }
+    
+    private func verifyTrackingPermissions() {
+        // Verificar y solicitar permisos de tracking
+        TrackingPermissionHelper.shared.requestTrackingPermission { status in
+            switch status {
+            case .authorized:
+                DDLogInfo("Tracking - Permiso concedido")
+            case .denied:
+                DDLogInfo("Tracking - Permiso denegado")
+            case .notDetermined:
+                DDLogInfo("Tracking - El usuario aún no ha tomado una decisión")
+            case .restricted:
+                DDLogInfo("Tracking - El permiso está restringido")
+            @unknown default:
+                DDLogInfo("Tracking - Estado desconocido")
+            }
+        }
+    }
+    
+    private func verifyNotificationPermissions() {
+        // Verificar y solicitar permisos de notificación
+        NotificationPermissionHelper.shared.getAuthorizationStatus { status in
+            DispatchQueue.main.async {
+                switch status {
+                case .notDetermined:
+                    // El usuario aún no ha tomado una decisión, se solicita el permiso
+                    NotificationPermissionHelper.shared.requestAuthorization { granted in
+                        if granted {
+                            DDLogInfo("Permiso concedido")
+                        } else {
+                            DDLogInfo("Permiso denegado")
+                        }
+                    }
+                case .authorized:
+                    DDLogInfo("Permiso ya concedido")
+                case .denied:
+                    DDLogInfo("Permiso denegado, sugerir ir a Configuración")
+                case .provisional:
+                    DDLogInfo("Permiso provisional concedido (solo notificaciones no intrusivas)")
+                case .ephemeral:
+                    DDLogInfo("Permiso efímero concedido (solo en apps webclip)")
+                @unknown default:
+                    DDLogInfo("Estado desconocido")
+                }
+            }
+        }
+    }
 }
 

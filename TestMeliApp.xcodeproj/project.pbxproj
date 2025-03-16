@@ -440,6 +440,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestMeliApp/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Utilizamos tu ubicación para poder agregar direcciones de entrega para tus pedidos y puedas hacer seguimiento de tus pedidos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Usamos esta información para personalizar anuncios y mejorar tu experiencia.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;
@@ -472,6 +474,8 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestMeliApp/Info.plist;
+				INFOPLIST_KEY_NSLocationUsageDescription = "Utilizamos tu ubicación para poder agregar direcciones de entrega para tus pedidos y puedas hacer seguimiento de tus pedidos.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Usamos esta información para personalizar anuncios y mejorar tu experiencia.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Home;

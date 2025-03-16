@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>NSUserTrackingUsageDescription</key>
+    <string>Usamos esta información para personalizar anuncios y mejorar tu experiencia.</string>
+    <key>NSUserNotificationsUsageDescription</key>
+    <string>Usamos notificaciones para mantenerte informado sobre actualizaciones importantes.</string>
 	<key>NSAllowsArbitraryLoads</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
