@@ -99,7 +99,8 @@ struct RankingIntrospection: Codable {
 
 // MARK: - SearchProduct
 struct SearchProduct: Codable {
-    let id, title: String
+    let id: String?
+    let title: String
     let condition: String
     let thumbnailID: String
     let catalogProductID: String?
@@ -299,7 +300,7 @@ struct SalePriceMetadata: Codable {
 
 // MARK: - Seller
 struct Seller: Codable {
-    let id: Int
+    let id: Int?
     let nickname: String
 }
 
@@ -337,7 +338,8 @@ struct VariationsDatum: Codable {
 
 // MARK: - AttributeCombination
 struct AttributeCombination: Codable {
-    let id, name: String
+    let id: String?
+    let name: String
     let valueID: String?
     let valueName: String?
 

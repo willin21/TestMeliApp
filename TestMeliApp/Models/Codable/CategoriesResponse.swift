@@ -3,7 +3,7 @@ import Foundation
 typealias Categories = [CategoryResponse]
 
 struct CategoryResponse: Codable {
-    let id: String
+    let id: String?
     let name: String
 
     enum CodingKeys: String, CodingKey {

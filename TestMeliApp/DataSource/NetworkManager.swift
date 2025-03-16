@@ -27,7 +27,7 @@ class NetworkManager: NetworkRequest {
                         do {
                             let model: T = try T.toModel(data: data)
                             
-                            DDLogInfo("Parsing data was successfully.")
+                            DDLogInfo("Parsing data from '\(api.path)' was successfully.")
                             observer.onNext(model)
                         } catch let error {
                             let nsError = NSError(domain: "Parsing data error.", code: response.response?.statusCode ?? 0, userInfo: ["message": error.localizedDescription])
