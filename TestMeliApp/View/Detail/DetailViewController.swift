@@ -16,7 +16,7 @@ class DetailViewController: BaseViewController {
     
     // MARK: - Properties
     var hudProgress: MBProgressHUD?
-    
+    var autosuggesteTappedSubject: PublishSubject<Void>?
     var item: SearchProduct?
     
     override func viewDidLoad() {
@@ -36,13 +36,14 @@ class DetailViewController: BaseViewController {
     func setupView() {
         if let product = item {
             let defaultImage = UIImage(named: Constants.Image.defaultImage)
-            let url = URL(string: product.thumbnail)
+            let secureImage = product.thumbnail.asSecureURL()
+            let url = URL(string: secureImage)
             
             productImageView.sd_setImage(with: url, placeholderImage: defaultImage)
             titleLabel.text = product.title
             detailOneLabel.text = product.id
             detailTwoLabel.text = product.currencyID
-            detailThreeLabel.text = "\(String(describing: product.price))"
+            detailThreeLabel.text = product.price?.toCOPCurrency()
             detailFourLabel.text = product.officialStoreName
         }
     }

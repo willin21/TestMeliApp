@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fl8-bP-eby">
-                                <rect key="frame" x="0.0" y="423" width="393" height="395"/>
+                                <rect key="frame" x="0.0" y="398" width="393" height="454"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fvv-aI-4BW">
-                                <rect key="frame" x="0.0" y="118" width="393" height="220"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="200"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="85d-hm-VDY"/>
+                                    <constraint firstAttribute="height" constant="200" id="85d-hm-VDY"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="3Ze-W2-tDh">
                                     <size key="itemSize" width="160" height="200"/>
@@ -36,7 +36,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ccQ-y9-FyL">
-                                        <rect key="frame" x="0.0" y="10" width="160" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4mH-UH-gLV">
                                             <rect key="frame" x="0.0" y="0.0" width="160" height="200"/>
@@ -46,7 +46,7 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1L-BA-43p">
-                                <rect key="frame" x="15" y="353" width="123" height="36"/>
+                                <rect key="frame" x="15" y="328" width="123" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="Iad-AM-MMc"/>
                                 </constraints>
@@ -55,21 +55,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recommended" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3Q-i0-qOx">
-                                <rect key="frame" x="15" y="387" width="116" height="21"/>
+                                <rect key="frame" x="15" y="362" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.5457239747" green="0.5457239747" blue="0.5457239747" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="q1L-BA-43p" firstAttribute="top" secondItem="fvv-aI-4BW" secondAttribute="bottom" constant="15" id="0o1-xL-49N"/>
                             <constraint firstItem="fvv-aI-4BW" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="4Lh-EJ-fR4"/>
                             <constraint firstItem="fl8-bP-eby" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="AUi-xO-2Xw"/>
+                            <constraint firstAttribute="bottom" secondItem="fl8-bP-eby" secondAttribute="bottom" id="CCI-g1-Ysz"/>
                             <constraint firstItem="fl8-bP-eby" firstAttribute="top" secondItem="g3Q-i0-qOx" secondAttribute="bottom" constant="15" id="Cg7-Hm-hQB"/>
-                            <constraint firstItem="fvv-aI-4BW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="15" id="Gg4-JV-qm5"/>
-                            <constraint firstItem="fl8-bP-eby" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="KRj-Bp-FMc"/>
+                            <constraint firstItem="fvv-aI-4BW" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="Gg4-JV-qm5"/>
                             <constraint firstItem="fl8-bP-eby" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="eEJ-wn-Olo"/>
                             <constraint firstItem="g3Q-i0-qOx" firstAttribute="top" secondItem="q1L-BA-43p" secondAttribute="bottom" constant="-2" id="iVC-3j-Q1c"/>
                             <constraint firstItem="q1L-BA-43p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="mWT-Gj-SdW"/>

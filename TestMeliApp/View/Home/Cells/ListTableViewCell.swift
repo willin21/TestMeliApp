@@ -1,9 +1,8 @@
 import UIKit
 import SDWebImage
 
-class RecommendedTableViewCell: UITableViewCell {
+class ListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var userNameContent: UIView!
     @IBOutlet weak var favoriteImage: UIImageView!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -18,16 +17,16 @@ class RecommendedTableViewCell: UITableViewCell {
     
     func setupValues(data: SearchProduct) {
         let defaultImage = UIImage(named: Constants.Image.defaultImage)
-        let urlImage = URL(string: (data.thumbnail))
+        let secureImage = data.thumbnail.asSecureURL()
         
-        productImageView.sd_setImage(with: urlImage, placeholderImage: defaultImage)
+        if let urlImage = URL(string: (secureImage)) {
+            productImageView.sd_setImage(with: urlImage, placeholderImage: defaultImage)
+        }
         
         titleLabel.text = data.title
 
         userNameLabel.text = ""
         userNameLabel.textColor = .white
-        userNameContent.backgroundColor = .purple
-        userNameContent.layer.cornerRadius = 5
     
         dateLabel.text = ""
         setFavouriteImage(isFavourite: isFavorite)

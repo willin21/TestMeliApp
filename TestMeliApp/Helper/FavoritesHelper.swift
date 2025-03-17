@@ -4,19 +4,19 @@ class FavoritesHelper {
     
     static let shared = FavoritesHelper()
     
-    func getFavorites() -> [Product] {
+    func getFavorites() -> [SearchProduct] {
         guard let data = UserDefaultsHelper.getObject(forKey: Constants.UserDefaults.saveFavoriteItems) else {
             return []
         }
         
-        return (try? JSONDecoder().decode([Product].self, from: data)) ?? []
+        return (try? JSONDecoder().decode([SearchProduct].self, from: data)) ?? []
     }
     
     func removeAllFavorites() {
         UserDefaultsHelper.removeObject(forKey: Constants.UserDefaults.saveFavoriteItems)
     }
     
-    func save(product: Product) throws {
+    func save(product: SearchProduct) throws {
         var products = getFavorites()
 
         if let index = products.firstIndex(of: product) {
@@ -29,12 +29,12 @@ class FavoritesHelper {
         try save(products)
     }
     
-    private func save(_ products: [Product]) throws {
+    private func save(_ products: [SearchProduct]) throws {
         let data = try JSONEncoder().encode(products)
         UserDefaultsHelper.saveObject(objectToSave: data, forKey: Constants.UserDefaults.saveFavoriteItems)
     }
     
-    func isSaved(product: Product) -> Bool {
+    func isSaved(product: SearchProduct) -> Bool {
         let products = getFavorites()
         
         if let _ = products.firstIndex(of: product) {

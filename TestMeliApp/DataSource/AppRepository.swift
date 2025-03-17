@@ -26,5 +26,9 @@ class AppRepository: BaseRepository, RepositoryProtocol {
     func getUser() -> Observable<UserResponse> {
         return callService(api: ApiRouter.getUser)
     }
+    
+    func getAutosuggest(autoSuggestRequest: AutosuggestRequest) -> Observable<AutosuggestResponse> {
+        return callService(api: ApiRouter.autosuggest(autosuggest: autoSuggestRequest))
+    }
 }
 

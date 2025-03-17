@@ -5,7 +5,7 @@ import RxDataSources
 import MBProgressHUD
 
 private struct Cells {
-    static let recommendedTableViewCell = "RecommendedTableViewCell"
+    static let listTableViewCell = "ListTableViewCell"
     static let productCollectionViewCell = "ProductCollectionViewCell"
 }
 
@@ -56,7 +56,7 @@ class HomeViewController: BaseViewController {
     private func setupTableView() {
         recommendedTableView
             .rx.setDelegate(self).disposed(by: super.disposeBag)
-        recommendedTableView.register(UINib(nibName: Cells.recommendedTableViewCell, bundle: nil), forCellReuseIdentifier: Cells.recommendedTableViewCell)
+        recommendedTableView.register(UINib(nibName: Cells.listTableViewCell, bundle: nil), forCellReuseIdentifier: Cells.listTableViewCell)
         
         recommendedTableView.keyboardDismissMode = .onDrag
         recommendedTableView.alwaysBounceVertical = false
@@ -69,13 +69,17 @@ class HomeViewController: BaseViewController {
     }
     
     private func bindView() {
-        showLoading()
-        categoriesViewModel.getCategories()
-        oauthViewModel.getUser()
-        oauthViewModel.refreshToken()
-        
+        fetchRequest()
         bindCollectionView()
         bindTableView()
+    }
+    
+    private func fetchRequest() {
+        showLoading()
+        
+        oauthViewModel.refreshToken()
+        oauthViewModel.getUser()
+        categoriesViewModel.getCategories()
     }
     
     private func bindCollectionView() {
@@ -152,7 +156,9 @@ class HomeViewController: BaseViewController {
             }).disposed(by: super.disposeBag)
         
         // MARK: ViewModel
-        categoriesViewModel.lastCategoryBehavior.bind(to: recommendedTableView.rx.items(cellIdentifier: Cells.recommendedTableViewCell, cellType: RecommendedTableViewCell.self)) { row, item, cell in
+        categoriesViewModel.lastCategoryBehavior.bind(to: recommendedTableView.rx.items(cellIdentifier: Cells.listTableViewCell, cellType: ListTableViewCell.self)) { row, item, cell in
+            let isFavourite = FavoritesHelper.shared.isSaved(product: item)
+            cell.isFavorite = isFavourite
             cell.setupValues(data: item)
             cell.accessoryType = .disclosureIndicator
         }.disposed(by: super.disposeBag)
@@ -186,15 +192,15 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func reloadDataAction(_ sender: Any) {
-        searchViewModel.getSearchCollection("")
+        searchViewModel.getSearchByWord("")
     }
     
     @IBAction func searchButtonAction(_ sender: UIButton!) {
         self.performSegue(withIdentifier: Segues.searchViewController, sender: self)
     }
-
+    
     @objc func refreshData() {
-        bindView()
+        //bindView()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) { [weak self] in
             self?.refreshControl.endRefreshing()
         }
@@ -211,8 +217,8 @@ extension HomeViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
 
-        if let _ = self.categoryTwoTableDataSource?[indexPath.row] {
-            let isFavourite = false
+        if let product = self.categoryTwoTableDataSource?[indexPath.row] {
+            let isFavourite = FavoritesHelper.shared.isSaved(product: product)
             let title = isFavourite ? "Remove favourite" : "Add favourite"
             
             let contextItem = UIContextualAction(style: .normal, title: title) { (contextualAction, view, boolValue) in
@@ -223,6 +229,12 @@ extension HomeViewController: UITableViewDelegate {
             if isFavourite {
                 contextItem.backgroundColor = .systemRed
             } else {
+                do {
+                    try FavoritesHelper.shared.save(product: product)
+                    self.showAlert(message: Constants.Text.addfavorites)
+                } catch {
+                    
+                }
                 contextItem.backgroundColor = .systemYellow
             }
             

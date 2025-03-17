@@ -1,5 +1,6 @@
 import UIKit
 import CocoaLumberjack
+import SDWebImage
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -9,6 +10,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupLogger()
         verifyTrackingPermissions()
         verifyNotificationPermissions()
+        cleanSDImageCache()
 
         return true
     }
@@ -77,6 +79,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+    }
+    
+    private func cleanSDImageCache() {
+        SDImageCache.shared.clearMemory()
+        SDImageCache.shared.clearDisk(onCompletion: nil)
+        SDWebImageManager.shared.removeAllFailedURLs()
     }
 }
 

@@ -7,6 +7,7 @@ enum ApiRouter: URLRequestConvertible {
     case getOauthToken(oauth: OAuthRequest)
     case refreshToken(oauth: OAuthRequest)
     case getUser
+    case autosuggest(autosuggest: AutosuggestRequest)
 
     var absoluteUrl: String {
         switch self {
@@ -21,6 +22,8 @@ enum ApiRouter: URLRequestConvertible {
 
     func getBaseDomain() -> String {
         switch self {
+        case .autosuggest:
+            return Constants.Request.mlstaticURL + path
         default:
             return Constants.Request.baseURL + path
         }
@@ -39,25 +42,23 @@ enum ApiRouter: URLRequestConvertible {
             
         case .getUser:
             return "users/me"
+            
+        case .autosuggest:
+            return siteID + "autosuggest"
         }
     }
 
     var headers: HTTPHeaders {
         switch self {
-        case .getCategories:
+        case .getCategories, .autosuggest:
             return [:]
-
-        case .getSearch:
             
-            return [
-                "accept": "application/json",
-            ]
         case .getOauthToken,
                 .refreshToken:
             return [
                 "content-type": "application/x-www-form-urlencoded"
             ]
-        case .getUser, .getSearchByCategory:
+        case .getUser, .getSearchByCategory, .getSearch:
             let accessToken = OAuthHelper.shared.getToken()
             
             if !accessToken.isEmpty {
@@ -91,6 +92,9 @@ enum ApiRouter: URLRequestConvertible {
             
         case .getOauthToken(let oauth), .refreshToken(let oauth):
             return oauth.toDictionary() ?? [:]
+            
+        case .autosuggest(let query):
+            return query.toDictionary() ?? [:]
         }
     }
 
@@ -99,7 +103,8 @@ enum ApiRouter: URLRequestConvertible {
         case .getSearch,
                 .getSearchByCategory,
                 .getCategories,
-                .getUser:
+                .getUser,
+                .autosuggest:
             
             return URLEncoding.queryString
             

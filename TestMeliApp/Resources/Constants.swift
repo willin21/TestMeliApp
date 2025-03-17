@@ -3,6 +3,7 @@ import UIKit
 struct Constants {
     struct Request {
         static let baseURL = "https://api.mercadolibre.com/"
+        static let mlstaticURL = "https://http2.mlstatic.com/resources/"
     }
     
     struct Text {

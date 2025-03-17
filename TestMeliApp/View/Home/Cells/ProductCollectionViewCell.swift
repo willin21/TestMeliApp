@@ -11,7 +11,13 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     func setupView(image: String) {
         let defaultImage = UIImage(named: Constants.Image.defaultImage)
-        let url = URL(string: image)
+        let secureImage = image.asSecureURL()
+        
+        guard let url = URL(string: secureImage) else {
+            print("URL no válida: \(image)")
+            productImageView.image = defaultImage
+            return
+        }
         
         productImageView.sd_setImage(with: url, placeholderImage: defaultImage)
     }

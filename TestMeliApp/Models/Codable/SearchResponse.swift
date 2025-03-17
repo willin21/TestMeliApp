@@ -98,7 +98,7 @@ struct RankingIntrospection: Codable {
 }
 
 // MARK: - SearchProduct
-struct SearchProduct: Codable {
+struct SearchProduct: Codable, Equatable {
     let id: String?
     let title: String
     let condition: String
@@ -159,6 +159,10 @@ struct SearchProduct: Codable {
         case variationID = "variation_id"
         case variationFilters = "variation_filters"
         case officialStoreName = "official_store_name"
+    }
+    
+    static func == (lhs: SearchProduct, rhs: SearchProduct) -> Bool {
+        lhs.id == rhs.id && lhs.domainID == rhs.domainID
     }
 }
 
